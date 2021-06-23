@@ -6,8 +6,13 @@ import java.time.format.DateTimeFormatter;
 public class CodeJson {
     String code;
     String date;
-    final String DATE_FORMATTER = "yyyy/MM/dd HH:mm:ss";
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMATTER);
+
+    public CodeJson(String code, String data) {
+        this.code = code;
+        this.date = data;
+    }
+//final String DATE_FORMATTER = "yyyy/MM/dd HH:mm:ss";
+    //DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMATTER);
 
     public String getCode() {
         return code;
@@ -23,15 +28,5 @@ public class CodeJson {
 
     public void setDate(String date) {
         this.date = date;
-    }
-
-    public CodeJson(String snippetCode) {
-        this.code = snippetCode;
-        this.date = LocalDateTime.now().format(formatter);
-    }
-
-    public CodeJson() {
-        this.code = "public static void main(String[] args) {\\n    SpringApplication.run(CodeSharingPlatform.class, args);\\n}";
-        this.date = LocalDateTime.now().format(formatter);
     }
 }
