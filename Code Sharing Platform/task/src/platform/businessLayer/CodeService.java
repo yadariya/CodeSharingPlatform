@@ -15,7 +15,7 @@ public class CodeService {
         this.codeJsonRepository = codeJsonRepository;
     }
 
-    public CodeJson findCodeJsonById(Integer id) {
+    public CodeJson findCodeJsonById(String id) {
         return codeJsonRepository.findCodeJsonById(id);
     }
 
@@ -25,5 +25,9 @@ public class CodeService {
 
     public CodeJson save(CodeJson toSave) {
         return codeJsonRepository.save(toSave);
+    }
+
+    public void deleteById(String id) {
+        codeJsonRepository.deleteById(id);
     }
 }

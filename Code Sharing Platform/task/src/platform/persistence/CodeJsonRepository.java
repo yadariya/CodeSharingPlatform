@@ -7,8 +7,8 @@ import platform.businessLayer.CodeJson;
 import java.util.List;
 
 @Repository
-public interface CodeJsonRepository extends CrudRepository<CodeJson, Integer> {
-    CodeJson findCodeJsonById(Integer id);
+public interface CodeJsonRepository extends CrudRepository<CodeJson, String> {
+    CodeJson findCodeJsonById(String id);
 
     List<CodeJson> findAll();
 

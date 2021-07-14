@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Code</title>
@@ -9,8 +9,18 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<span id="load_date"> ${date}</span>
-<pre id="code_snippet"><code>${code}</code>
+<#if timeRestriction == true>
+    <span id="time_restriction" type="text">${time}</span>
+    <br/>
+</#if>
+<#if viewRestriction == true>
+    <span id="views_restriction" type="text">${view-1}</span>
+    ${code.setViews(view-1)}
+    ${service.save(code)}
+    <br/>
+</#if>
+<span id="load_date"> ${code.date}</span>
+<pre id="code_snippet"><code>${code.code}</code>
 </pre>
 </body>
 </html>
