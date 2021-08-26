@@ -9,9 +9,9 @@ Application to share code with other developers using web, analogy of Pastebin. 
 1. Clone project
 2. Compile project using 
 ```
-# javac CodeSharingPlatform.java
+ javac CodeSharingPlatform.java
 ```
 4. Run using
  ```
- # java CodeSharingPlatform
+  java CodeSharingPlatform
  ```
