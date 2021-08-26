@@ -7,5 +7,11 @@ Application to share code with other developers using web, analogy of Pastebin. 
 ### How to run
 
 1. Clone project
-2. Compile project using # javac CodeSharingPlatform.java
-3. Run using # java CodeSharingPlatform
+2. Compile project using 
+```
+# javac CodeSharingPlatform.java
+```
+4. Run using
+ ```
+ # java CodeSharingPlatform
+ ```
